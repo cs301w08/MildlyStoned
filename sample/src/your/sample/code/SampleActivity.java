@@ -23,7 +23,7 @@ public class SampleActivity extends Activity{
 		String str = "";
 		for(long n : nums)
 	        decode(n, 100);
-		
+		print(str);
 	}
 	 
 	public String decode(long num,int x){
