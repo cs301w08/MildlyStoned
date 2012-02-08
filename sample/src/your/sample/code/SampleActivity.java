@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.EditText;
+import android.widget.TextView;
 
 //hello
 public class SampleActivity extends Activity{
@@ -13,21 +14,25 @@ public class SampleActivity extends Activity{
 			    
 			
 			setContentView(R.layout.main);
-			((EditText)findViewById(R.id.texty)).setText("");
-		//	this.main();
+			((TextView)findViewById(R.id.texty)).setText("");
+			this.main();
 	 }
 	 
 	public  void main()  {
 		long nums[] = {632528420672538449L, 429290590650920920L, 184567231788315850L};
+		String str = "";
 		for(long n : nums)
-	        decode(n, 100);
+	       str += decode(n, 100);
+		print(str);
 	}
 	 
-	public void decode(long num,int x){
+	public String decode(long num,int x){
+		String s = "";
 		for(;num>=1;num /= 1000){
 		    x += dig(num%1000)==9?((x/dig(num%1000%100))*-1) : dig(num%1000)==8?((x/dig(num%1000%100))):dig(num%1000)%2==0?(dig(num%1000%100)):(dig(num%1000%100)*-1);
-		   Log.i("FUN", ((dig(num%1000%10)!=0)?(char)x:"").toString());
+		   s+=( ((dig(num%1000%10)!=0)?(char)x:"").toString());
 		}
+		return (s);
 	}
 	public  long dig(long n){
 		if(n/10<1)
@@ -36,7 +41,8 @@ public class SampleActivity extends Activity{
 		    return dig(n/10);
 	}
 	
-	public void print (Object s){
-		//((EditText)findViewById(R.id.texty)).append(s.toString());
+	public void print (String s){
+		Log.i("FUN", s);
+		((TextView)findViewById(R.id.texty)).setText(s.toString());
 	}
 }
