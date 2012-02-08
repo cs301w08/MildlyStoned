@@ -6,13 +6,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.EditText;
 
-
-
+//hello
 public class SampleActivity extends Activity{
 	 public void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
 			    
-			    
+			
 			setContentView(R.layout.main);
 			((EditText)findViewById(R.id.texty)).setText("");
 			this.main();
