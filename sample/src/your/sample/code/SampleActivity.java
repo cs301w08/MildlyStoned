@@ -14,7 +14,7 @@ public class SampleActivity extends Activity{
 			
 			setContentView(R.layout.main);
 			((EditText)findViewById(R.id.texty)).setText("");
-			this.main();
+		//	this.main();
 	 }
 	 
 	public  void main()  {
