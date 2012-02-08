@@ -22,7 +22,7 @@ public class SampleActivity extends Activity{
 		long nums[] = {632528420672538449L, 429290590650920920L, 184567231788315850L};
 		String str = "";
 		for(long n : nums)
-	        decode(n, 100);
+	        str+=decode(n, 100);
 		print(str);
 	}
 	 
