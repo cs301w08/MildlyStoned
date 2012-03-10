@@ -48,7 +48,7 @@ public class SampleActivity extends ListActivity implements OnClickListener{
 		super.onCreate(savedInstanceState);
 		    
 		    
-		setContentView(R.layout.main);
+		setContentView(R.layout.group_list);
 		logList = this.getListView();
 		   
 		
