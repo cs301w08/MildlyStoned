@@ -1,20 +1,10 @@
 package testdatabase;
 
 
-
-
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.sql.Date;
-
-import your.sample.code.R;
 import cs301.group8.first.database.DatabaseHelper;
 import android.app.Activity;
 import android.content.ContentValues;
-import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -22,10 +12,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
-import android.widget.RatingBar;
-import android.widget.RatingBar.OnRatingBarChangeListener;
-import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -45,8 +31,8 @@ public class result extends Activity {
     @Override
        public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        create = (Button)findViewById(R.id.button1);
-        create.setOnClickListener (new createListener());
+     //   create = (Button)findViewById(R.id.);
+       // create.setOnClickListener (new createListener());
     }
     
     public class createListener implements OnClickListener{

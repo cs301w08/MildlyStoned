@@ -1,19 +1,11 @@
 package cs301.group8.first.blemish.tracker;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.text.ParseException;
+
 import java.util.ArrayList;
-import android.app.AlertDialog;
-import android.app.Dialog;
+
 import android.app.ListActivity;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
