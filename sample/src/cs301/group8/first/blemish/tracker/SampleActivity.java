@@ -40,6 +40,7 @@ public class SampleActivity extends ListActivity implements OnClickListener{
    
     private CustomAdapter listAdpt;
     private ListView logList;
+    protected ArrayList<String> groups;
     
     
     
@@ -51,7 +52,7 @@ public class SampleActivity extends ListActivity implements OnClickListener{
 		logList = this.getListView();
 		   
 		
-	//	this.listAdpt = new CustomAdapter(this, R.layout.list_item, this.logs);
+		this.listAdpt = new CustomAdapter(this, R.layout.list_item, this.groups);
 		logList.setAdapter(listAdpt);  
 		
 	//	View newLog = findViewById(R.id.new_log_button);
@@ -105,11 +106,11 @@ public class SampleActivity extends ListActivity implements OnClickListener{
      * Done by remove from arraylist and then rewriting entire list...
      */
       
-    private class CustomAdapter extends ArrayAdapter<Object>{
+    private class CustomAdapter extends ArrayAdapter<String>{
 
-        private ArrayList<Object> logs;
+        private ArrayList<String> logs;
         
-        public CustomAdapter (Context context, int res_id, ArrayList<Object> l){
+        public CustomAdapter (Context context, int res_id, ArrayList<String> l){
         	
             super (context, res_id, l);
             this.logs = l;
