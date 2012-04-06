@@ -1,21 +1,27 @@
 package cs301.group8.database;
 
+import static cs301.group8.database.Constants.COL_GROUP;
+import static cs301.group8.database.Constants.COL_NOTE;
+import static cs301.group8.database.Constants.COL_PID;
+import static cs301.group8.database.Constants.COL_REMINDER;
+import static cs301.group8.database.Constants.COL_TAG;
+import static cs301.group8.database.Constants.COL_TIME;
+import static cs301.group8.database.Constants.DATABASE_NAME;
+import static cs301.group8.database.Constants.GROUPTABLE;
+import static cs301.group8.database.Constants.PICTURETABLE;
+import static cs301.group8.database.Constants.TAGTABLE;
+
 import java.io.File;
 import java.util.ArrayList;
-
-import cs301.group8.meta.Picture;
-import cs301.group8.meta.Util;
-
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.sqlite.*;
-import android.provider.ContactsContract.CommonDataKinds.Note;
-import android.text.method.MovementMethod;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteStatement;
 import android.util.Log;
-
-import static cs301.group8.database.Constants.*;
+import cs301.group8.meta.Picture;
+import cs301.group8.meta.Util;
 
 /** AppDatabase uses SQLite database to create a table where we store our app
  * information.  This class provides a variety of methods which allow the application 

@@ -2,13 +2,16 @@
 */
 package cs301.group8.blem;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.Activity;
-import android.media.RingtoneManager;
-import android.os.Bundle;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.database.Cursor;
+import android.media.RingtoneManager;
+import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.view.View;
 import android.widget.AdapterView;
@@ -16,10 +19,6 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /** SoundRecognize class allows for the user to use voice input to perform search queries.
  *  SoundRecognize is called when the user selects it from the menu button in the search activity.

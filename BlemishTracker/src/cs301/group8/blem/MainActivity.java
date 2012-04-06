@@ -2,41 +2,31 @@ package cs301.group8.blem;
 
 
 import java.util.ArrayList;
-import java.util.Calendar;
-
-import cs301.group8.blem.Dialogs;
-import cs301.group8.database.AppDatabase;
-import cs301.group8.meta.Util;
 
 import android.app.Activity;
-import android.app.AlarmManager;
 import android.app.Dialog;
 import android.app.ListActivity;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.speech.RecognizerIntent;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import cs301.group8.database.AppDatabase;
+import cs301.group8.meta.Util;
 
 /** MainActivity class is the activity that populates the list of group names.  MainActivity is called by the 
  * BlemishTabActivity as the "Groups" tab to display the list of all groups present.  MainActivity also allows 

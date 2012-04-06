@@ -1,7 +1,5 @@
 package cs301.group8.blem;
 
-import cs301.group8.meta.Util;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +10,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.Toast;
+import cs301.group8.meta.Util;
 
 
 

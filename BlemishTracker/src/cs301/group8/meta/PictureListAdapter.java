@@ -11,22 +11,18 @@ import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
-import android.widget.AdapterView;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.AdapterView.OnItemSelectedListener;
-import cs301.group8.blem.BlemishActivity;
 import cs301.group8.blem.CompareActivity;
 import cs301.group8.blem.Dialogs;
 import cs301.group8.blem.ImageActivity;
 import cs301.group8.blem.R;
-import cs301.group8.blem.SearchActivity;
 
 /**PictureListAdapter creates the custom list that will be used to populate the results of the search and the 
  * BlemishActivity list view.  Each 'view' element contains a small thumbnail image, a checkbox (hidden in search), 

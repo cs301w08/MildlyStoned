@@ -5,13 +5,10 @@ import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.text.DateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
-
-import cs301.group8.blem.R;
 
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;

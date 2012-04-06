@@ -3,12 +3,8 @@ package cs301.group8.blem;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Resources;
 import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.TabHost;
-import android.widget.TabHost.TabSpec;
 
 /** BlemishTabActivity class is the activity that is first called upon initiation of the application.  BlemishTabActivity populates the 
  * ListView with names of blemish groups that the user has already initiated (using database calls).  BlemishTabActivity also 

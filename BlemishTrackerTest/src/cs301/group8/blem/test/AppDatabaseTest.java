@@ -2,11 +2,10 @@ package cs301.group8.blem.test;
 
 import java.util.ArrayList;
 
-
 import android.test.ActivityInstrumentationTestCase2;
-import cs301.group8.blem.*;
-import cs301.group8.database.*;
-import cs301.group8.meta.*;
+import cs301.group8.blem.MainActivity;
+import cs301.group8.database.AppDatabase;
+import cs301.group8.meta.Picture;
 
 /** This test class MUST be run from a "clean" app (where there are currently no pictures and no groups present)
  * @author Group 08 <cs301-group8@ualberta.ca>

@@ -1,13 +1,7 @@
 package cs301.group8.blem;
 
-import java.sql.Date;
-import java.text.DateFormat;
 import java.util.ArrayList;
 
-
-import cs301.group8.database.AppDatabase;
-import cs301.group8.meta.Picture;
-import cs301.group8.meta.Util;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -15,8 +9,6 @@ import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
-import android.os.Environment;
-import android.os.Parcelable;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
@@ -24,10 +16,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import cs301.group8.database.AppDatabase;
+import cs301.group8.meta.Picture;
+import cs301.group8.meta.Util;
 
 /** CompareActivity class is an Android activity class that allows the user to view two blemishes at a time, side by side, 
  * for comparative reasons.  The activity allows the user to cycle through the pictures of the blemish group and long click

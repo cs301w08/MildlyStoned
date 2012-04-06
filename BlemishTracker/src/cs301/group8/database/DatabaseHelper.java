@@ -1,10 +1,21 @@
 package cs301.group8.database;
+import static cs301.group8.database.Constants.COL_GID;
+import static cs301.group8.database.Constants.COL_GROUP;
+import static cs301.group8.database.Constants.COL_NOTE;
+import static cs301.group8.database.Constants.COL_PID;
+import static cs301.group8.database.Constants.COL_REMINDER;
+import static cs301.group8.database.Constants.COL_TAG;
+import static cs301.group8.database.Constants.COL_TID;
+import static cs301.group8.database.Constants.COL_TIME;
+import static cs301.group8.database.Constants.GROUPTABLE;
+import static cs301.group8.database.Constants.PICTURETABLE;
+import static cs301.group8.database.Constants.TAGTABLE;
+import static cs301.group8.database.Constants.VERSION;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-import static cs301.group8.database.Constants.*;
 
 /** DatabaseHelper class provides DatabaseHelper objects which are used in modifying tables in SQLite
  *

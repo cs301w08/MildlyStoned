@@ -4,33 +4,19 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import cs301.group8.blem.SettingsActivity.MyOnItemSelectedListener;
-import cs301.group8.database.AppDatabase;
-import cs301.group8.meta.Picture;
-import cs301.group8.meta.PictureListAdapter;
-import cs301.group8.meta.Util;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.ListActivity;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
-import android.util.SparseBooleanArray;
 import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.View.OnLongClickListener;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
@@ -41,7 +27,10 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ImageView;
+import cs301.group8.database.AppDatabase;
+import cs301.group8.meta.Picture;
+import cs301.group8.meta.PictureListAdapter;
+import cs301.group8.meta.Util;
 
 /** BlemishActivity is an Android activity that displays the list of existing photos for a specific type of blemish.
  * BlemishActivity is launched when the user selects a blemish group from the main menu.
