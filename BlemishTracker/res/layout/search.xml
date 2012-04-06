@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dip" >
+    
+     <MultiAutoCompleteTextView
+         android:id="@+id/search_text"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentTop="true"
+         android:layout_toLeftOf="@+id/search_type"
+         android:paddingBottom="5dp"
+         android:paddingLeft="10dp"
+         android:paddingTop="5dp"
+         android:textSize="18sp"
+         android:lines="1"
+         android:maxLines="1" >
+
+     	<requestFocus />
+     </MultiAutoCompleteTextView>
+
+    <Spinner
+        android:id="@+id/search_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/search_text"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:baselineAlignBottom="@id/search_text"
+        android:prompt="@string/search_prompt"
+        />
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/spinner2"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/search_type"
+        android:scrollbars="vertical" >
+
+    </ListView>
+
+    <TextView
+        android:id="@android:id/android:empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_type"
+        android:layout_centerHorizontal="true"
+        
+        android:text="@string/empty_list" />
+     <Spinner
+       android:id="@+id/spinner2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:layout_alignParentLeft="true"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+       android:prompt="@string/Mode" />
+
+</RelativeLayout>

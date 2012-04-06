@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="new_log">New</string>
+    <string name="app_name">Blemish Tracker</string>
+    <string name="add_blemish">Add Blemish</string>
+    <string name="AddEntry_title">Add Entry</string>
+    <string name="main_title">Skin Imperfections</string>
+    <string name="SetBlemish">Blemish name (or location):</string>
+    <string name="SetReminder">Enter Reminder Type (optional):</string>
+    <string name="SetReminderFreq">Enter Reminder Frequency:</string>
+    <string name="textView">Blemish:</string>
+    <string name="empty_list">No items to display</string>
+    <string name="SelectReminder">Select Reminder:</string>
+    <string-array name="ReminderArray">
+        <item>None</item>
+        <item>Hourly</item>
+        <item>Daily</item>
+        <item>Weekly</item>
+    </string-array>
+
+    <string name="default_prompt">Choose default tab</string>
+    <string name="email">email</string>
+    <string name="archive">archive</string>
+    <string name="Mode">More</string>
+    <string-array name="ModeArray">
+        <item>More</item><item >Delete Selected</item>
+        <item >Archive Selected</item>
+        <item >Email Selected</item>
+        
+        
+    </string-array>
+    <string-array name="settings_array">
+        <item >Group</item>
+        <item >Search</item>
+        <item >Setting</item>
+    </string-array>
+    <string-array name="search_array">
+        <item >Tag</item>
+        <item >Note</item>
+        <item >Date</item>
+    </string-array>
+    <string name="search_prompt">Search by:</string>
+
+</resources>

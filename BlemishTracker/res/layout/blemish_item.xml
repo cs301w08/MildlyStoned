@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:padding="5dp"
+    android:layout_height="60dp" >
+    
+     <CheckBox
+        android:id="@+id/picture_list_check"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+		
+     />
+    
+    <ImageView
+        android:id="@+id/littleimage"
+        
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+		android:layout_centerVertical="true"
+       
+        android:src="@drawable/ic_launcher"
+        android:layout_toRightOf="@+id/picture_list_check"
+        android:layout_marginLeft="20dp" 
+        
+        />
+    
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/littleimage"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/blemish_remove_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:layout_alignParentRight="true"
+        android:focusable="false"
+        android:text="X"
+        android:textSize="13sp" />
+
+</RelativeLayout>

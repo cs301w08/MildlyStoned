@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+
+    <TextView
+        android:id="@android:id/android:empty"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        
+        android:text="@string/empty_list" 
+         android:layout_alignParentTop="true"
+         android:layout_centerHorizontal="true"
+         android:gravity="center_horizontal"
+	/>
+
+    <Button
+        android:id="@+id/add_blemish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_blemish"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+         />
+    
+    
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical" 
+         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/add_blemish">
+    </ListView>
+
+</RelativeLayout>

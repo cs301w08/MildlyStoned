@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <TextView
+        android:id="@+id/BlemishViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:text="@string/main_title"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/EditGroupButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/BlemishViewTitle"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:background="@drawable/cogbutton2"
+        android:baselineAlignBottom="@id/BlemishViewTitle"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cogbutton" />
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/add_blemish"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/EditGroupButton"
+        android:scrollbars="vertical" >
+
+    </ListView>
+
+    <TextView
+        android:id="@android:id/android:empty"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/BlemishViewTitle"
+        android:layout_centerHorizontal="true"
+        android:text="@string/empty_list" />
+
+    <Button
+        android:id="@+id/add_blemish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:text="@string/add_blemish" />
+
+   <Spinner
+       android:id="@+id/spinner2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:layout_alignParentLeft="true"
+       android:layout_toLeftOf="@+id/add_blemish"
+       android:prompt="@string/Mode" />
+
+</RelativeLayout>

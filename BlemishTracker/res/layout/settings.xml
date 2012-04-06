@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="8dp" >
+
+    <CheckBox
+        android:id="@+id/settings_password_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" />
+
+    <Button
+        android:id="@+id/settings_password_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/settings_password_check"
+        android:layout_below="@+id/settings_password_check"
+        android:text="Set Password" />
+
+    <TextView
+        android:id="@+id/settings_password_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/settings_password_check"
+        android:layout_alignBottom="@+id/settings_password_check"
+        android:layout_alignLeft="@+id/settings_password_button"
+        android:text="Password On:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <CheckBox
+        android:id="@+id/settings_tooltip_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:layout_alignRight="@+id/settings_password_check"
+        android:layout_below="@id/settings_password_button"
+     />
+
+    <Spinner
+        android:id="@+id/settings_startscreen"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/settings_password_check"
+        android:layout_below="@id/settings_tooltip_check" />
+    
+    <TextView
+        android:id="@+id/settings_tooltip_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/settings_password_button"
+        android:layout_below="@+id/settings_password_button"
+        android:layout_alignBottom="@id/settings_tooltip_check"
+        android:layout_alignBaseline="@id/settings_tooltip_check"
+
+
+        android:text="Tool Tips:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+        <CheckBox
+            android:id="@+id/settings_sound_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/settings_startscreen"
+            android:layout_below="@+id/settings_startscreen" />
+        
+        
+        <TextView
+            android:id="@+id/settings_sound_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/settings_startscreen"
+            android:layout_alignBottom="@id/settings_sound_check"
+            android:layout_alignBaseline="@id/settings_sound_check"
+            android:layout_below="@+id/settings_startscreen"
+            android:text="Sound Reconize:"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+</RelativeLayout>
