@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 import cs301.group8.blem.CompareActivity;
@@ -34,12 +35,10 @@ import cs301.group8.blem.R;
 public class PictureListAdapter extends ArrayAdapter<Picture> {
 	public int position = 0;
 	private String group;
-	private OnClickListener listener;
 	
-	public PictureListAdapter (Context context, int res_id, ArrayList<Picture> pics, String group,  OnClickListener checkListen){
+	public PictureListAdapter (Context context, int res_id, ArrayList<Picture> pics, String group){
 		super (context, res_id, pics);
 		this.group = group;
-		listener = checkListen;
 	}
 	
 
@@ -118,7 +117,6 @@ public class PictureListAdapter extends ArrayAdapter<Picture> {
 			}
 		});
 		
-		if (listener!= null) v.findViewById(R.id.picture_list_check).setOnClickListener(listener);
 		holder.titleText.setText(Util.timeToDate(pic.getTime()));
 
 		return v;

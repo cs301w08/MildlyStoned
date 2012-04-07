@@ -1,9 +1,11 @@
 package cs301.group8.blem;
 
+import cs301.group8.meta.Util;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TabHost;
 
 /** BlemishTabActivity class is the activity that is first called upon initiation of the application.  BlemishTabActivity populates the 
@@ -33,8 +35,7 @@ public class BlemishTabActivity extends TabActivity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.tab);
 		SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-		String settabfirst = settings.getString("firsttab","group");
-
+		String settabfirst = Util.getStartTab(settings).toLowerCase();
 		//   Resources res = getResources();
 		TabHost tabHost = getTabHost();
 
@@ -59,13 +60,14 @@ public class BlemishTabActivity extends TabActivity
 		}
 		// tabHost.getLayoutParams().height = LayoutParams.WRAP_CONTENT;
 		//tabHost.requestLayout();
-		if(settabfirst.equals("Group")){
+		Log.i("verrify", "start tab: " + settabfirst);
+		if(settabfirst.equals("group")){
 			tabHost.setCurrentTab(0);
 		}
-		if(settabfirst.equals("Search")){
-			tabHost.setCurrentTab(2);
+		else if(settabfirst.equals("search")){
+			tabHost.setCurrentTab(1);
 		}
-		if(settabfirst.equals("Setting")){
+		else if(settabfirst.equals("setting")){
 			tabHost.setCurrentTab(2);
 		}
 

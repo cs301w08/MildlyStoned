@@ -103,7 +103,7 @@ public class BlemishActivity extends ListActivity implements View.OnClickListene
 		});
 
 
-		this.listAdpt = new PictureListAdapter(this, R.layout.group_item, pics, blemishGroup, null);
+		this.listAdpt = new PictureListAdapter(this, R.layout.group_item, pics, blemishGroup);
 		this.getListView().setAdapter(listAdpt);
 
 		Spinner spinner2 = (Spinner) findViewById(R.id.spinner2);

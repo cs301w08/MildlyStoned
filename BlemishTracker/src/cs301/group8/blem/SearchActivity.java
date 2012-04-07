@@ -24,6 +24,8 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.MultiAutoCompleteTextView;
@@ -60,12 +62,9 @@ public class SearchActivity extends ListActivity implements TextWatcher, OnItemS
 		setContentView(R.layout.search);
 
 		pics = new ArrayList<Picture>();
-
-		setListAdapter(new PictureListAdapter(this, R.layout.group_item, pics, "test", new OnClickListener() {
-			public void onClick(View v) {
-				setSpinner();
-			}
-		}));
+		
+		
+		setListAdapter(new PictureListAdapter(this, R.layout.group_item, pics, "test"));
 		db = new AppDatabase(this);
 		MultiAutoCompleteTextView input =(MultiAutoCompleteTextView)findViewById(R.id.search_text);
 		input.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, db.getAllTags()));
@@ -89,7 +88,7 @@ public class SearchActivity extends ListActivity implements TextWatcher, OnItemS
 
 	}
 
-	private boolean hasChecked(){
+	/*private boolean hasChecked(){
 		boolean re = false;
 		ListView lv = this.getListView();
 		for (int i=0;i<lv.getChildCount();i++){
@@ -99,7 +98,7 @@ public class SearchActivity extends ListActivity implements TextWatcher, OnItemS
 			}
 		}
 		return re;
-	}
+	}*/
 
 	/**search takes in input from the EditText and sends the string value of the input and 
 	 * the selected category from the spinner to the searcher from the database
@@ -179,7 +178,7 @@ public class SearchActivity extends ListActivity implements TextWatcher, OnItemS
 
 		PictureListAdapter adpt = (PictureListAdapter) getListAdapter();
 		adpt.clear();
-		setSpinner();
+//		setSpinner();
 		for (Picture pic : pics){
 			Log.i("VERRIFY", "Added: " + pic.getPath());
 			adpt.add(pic);
@@ -211,12 +210,12 @@ public class SearchActivity extends ListActivity implements TextWatcher, OnItemS
 	protected void onResume (){
 		android.util.Log.i("PERFORM", "Search: onResume");
 		super.onResume();
-		setSpinner();
+//		setSpinner();
 		search();
 
 	}
 
-	public void setSpinner(){
+/*	public void setSpinner(){
 		Spinner spinner = (Spinner) findViewById(R.id.spinner2);
 		if (spinner == null) return;
 		Log.i("Verrify", "Search: Setting spinners: " + hasChecked());
@@ -225,7 +224,7 @@ public class SearchActivity extends ListActivity implements TextWatcher, OnItemS
 		}else{
 			spinner.setVisibility(8);
 		}
-	}
+	}*/
 
 	protected void onPause(){
 		super.onResume();
@@ -302,7 +301,7 @@ public class SearchActivity extends ListActivity implements TextWatcher, OnItemS
 				emailSelected();
 			}
 			((Spinner) findViewById(R.id.spinner2)).setSelection(0);
-			setSpinner();
+		//	setSpinner();
 			break;
 		default:
 			break;
@@ -448,5 +447,6 @@ public class SearchActivity extends ListActivity implements TextWatcher, OnItemS
 		// TODO Auto-generated method stub
 
 	}
+
 
 }

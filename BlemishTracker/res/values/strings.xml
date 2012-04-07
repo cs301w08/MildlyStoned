@@ -22,9 +22,9 @@
     <string name="default_prompt">Choose default tab</string>
     <string name="email">email</string>
     <string name="archive">archive</string>
-    <string name="Mode">More</string>
+    <string name="Mode">Menu</string>
     <string-array name="ModeArray">
-        <item>More</item><item >Delete Selected</item>
+        <item>Menu</item><item >Delete Selected</item>
         <item >Archive Selected</item>
         <item >Email Selected</item>
         

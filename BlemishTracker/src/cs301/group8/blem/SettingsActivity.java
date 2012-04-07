@@ -39,8 +39,7 @@ import cs301.group8.meta.Util;
  * @author Group 08 <cs301-group8@ualberta.ca>
  * @version 2.0
  */
-public class SettingsActivity extends Activity implements OnClickListener
-{
+public class SettingsActivity extends Activity implements OnClickListener{
 	private CheckBox usePass;
 	private CheckBox tooltip;
 	private SharedPreferences settings;
@@ -60,8 +59,21 @@ public class SettingsActivity extends Activity implements OnClickListener
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spinner.setAdapter(adapter);
 		spinner.setOnItemSelectedListener(new MyOnItemSelectedListener());
-
 		settings = getSharedPreferences(Util.MY_PREFS_FILE, 0);
+		String match = Util.getStartTab(settings).toLowerCase();
+		for (int i=0;i<adapter.getCount(); i++){
+			Log.i("spinner","adapter pos " + (i+1) + ": " + adapter.getItem(i));
+			CharSequence str = adapter.getItem(i);
+			if (str == null) continue;
+			
+			if (str.toString().toLowerCase().equals(match)){
+				spinner.setSelection(i);
+				break;
+			}
+		}
+	//	Log.i("spinner", "Start pos: " + adapter.getPosition(Util.getStartTab(settings)));
+
+		
 		tooltip = (CheckBox) findViewById(R.id.settings_tooltip_check);
 		usePass = (CheckBox) findViewById(R.id.settings_password_check);
 		final Button setPass = (Button) findViewById(R.id.settings_password_button);
@@ -113,6 +125,8 @@ public class SettingsActivity extends Activity implements OnClickListener
 		Util.setTipsOn(settings, tooltip.isChecked());
 		Log.i("VERRIFY", "Settings: setting password enabled to: " + usePass.isChecked());
 		Util.setPassOn(settings, usePass.isChecked());
+		Log.i("VERRIFY", ((Spinner)findViewById(R.id.settings_startscreen)).getSelectedItem().toString());
+		Util.setStartTab(settings, ((Spinner)findViewById(R.id.settings_startscreen)).getSelectedItem().toString());
 	}
 	
 

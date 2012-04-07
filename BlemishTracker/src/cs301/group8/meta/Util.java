@@ -233,7 +233,7 @@ public class Util {
 
 	/**Gets the default starting tab from the preferences file*/
 	public static String getStartTab(SharedPreferences file){
-		return file.getString(STARTTAB_KEY, "");
+		return file.getString(STARTTAB_KEY, "group");
 	}
 
 	/**Sets the default starting tab from the preferences file*/
